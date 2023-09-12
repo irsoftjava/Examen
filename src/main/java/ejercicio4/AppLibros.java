@@ -1,6 +1,7 @@
 package ejercicio4;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -33,29 +34,36 @@ public class AppLibros {
         libros.add(new Libro("84-473-0120-6","Avances en Arquitectura","Helmut Richter","Informática", 2005,39.4));
 
         // Listar Libros
+        System.out.println("Lista de Libros.");
         for (Libro l : libros) {
             System.out.println(l);
         }
 
         // Mayor
         double mayor = mayorPrecio(libros);
-        System.out.println(mayor);
+        System.out.println();
+        System.out.println("Mayor Precio: " + mayor);
 
         // Categoría
+        String categoriaABuscar = "Informática";
+        System.out.println();
         int cc = (int)libros.stream()
                 .filter(p -> p.getCategoria().equals("Informática"))
                 .count();
-        System.out.println(cc);
+        System.out.printf("De la categoría %s existen %d libros.%n", categoriaABuscar, cc);
 
         // Ordenar
-        libros.sort(new Comparator<Libro>() {
+        /*libros.sort(new Comparator<Libro>() {
             @Override
             public int compare(Libro o1, Libro o2) {
                 return o1.getTitulo().compareTo(o2.getTitulo());
             }
-        });
+        });*/
+        System.out.println();
+        libros.sort((Libro l1, Libro l2) -> l1.getTitulo().compareTo(l2.getTitulo()));
 
         // Listar Libros
+        System.out.println("Lista de Libros Ordenada por Titulo");
         for (Libro l : libros) {
             System.out.println(l);
         }
