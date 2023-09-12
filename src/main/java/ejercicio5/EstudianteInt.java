@@ -55,7 +55,7 @@ public class EstudianteInt extends Estudiante {
     public boolean esEuropeo() {
         return this.nacionalidad.equals(Nacionalidad.INGLES.toString()) ||
                 this.nacionalidad.equals(Nacionalidad.FRANCES.toString()) ||
-                this.nacionalidad.equals(Nacionalidad.PORTUGUÉS.toString());
+                this.nacionalidad.equals(Nacionalidad.PORTUGUES.toString());
     }
 
     public boolean descuentosParaJovenes() {

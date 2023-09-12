@@ -1,5 +1,5 @@
 package ejercicio5;
 
 public enum Nacionalidad {
-    INGLES, FRANCES, PORTUGUÉS, AMERICANO
+    INGLES, FRANCES, PORTUGUES, AMERICANO
 }
