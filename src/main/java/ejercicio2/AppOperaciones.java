@@ -1,5 +1,6 @@
 package ejercicio2;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -22,6 +23,8 @@ public class AppOperaciones {
     static int producto(int a, int b) {
         return a * b;
     }
+    
+
     static int division(int a, int b) {
         int r = 0;
         try {
@@ -86,5 +89,11 @@ public class AppOperaciones {
             case 3 -> System.out.printf("El Producto de %d * %d es igual a %d.\n", val1, val2, producto(val1, val2));
             case 4 -> System.out.printf("La División de %d / %d es igual a %d.\n", val1, val2, division(val1, val2));
         }
+
+        int[] valores = new int[]{132,54,87,1,789,45,67,809,234,56};
+
+        System.out.println();
+        System.out.println(Arrays.toString(valores));
+
     }
 }
