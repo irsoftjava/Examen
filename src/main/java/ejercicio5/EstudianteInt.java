@@ -19,12 +19,12 @@ public class EstudianteInt extends Estudiante {
 
     /**
      * Constructor Parametrizado
-     * @param nombre
-     * @param direccion
-     * @param edad
-     * @param codigo
-     * @param esErasmus
-     * @param nacionalidad
+     * @param nombre String
+     * @param direccion String
+     * @param edad int
+     * @param codigo String
+     * @param esErasmus boolean
+     * @param nacionalidad String
      */
     public EstudianteInt(String nombre, String direccion, int edad, String codigo, Boolean esErasmus, String nacionalidad) {
         super(nombre, direccion, edad, codigo);
@@ -34,7 +34,6 @@ public class EstudianteInt extends Estudiante {
 
     /**
      * Métodos
-     * @return
      */
     public Boolean getEsErasmus() {
         return esErasmus;
@@ -59,7 +58,7 @@ public class EstudianteInt extends Estudiante {
     }
 
     public boolean descuentosParaJovenes() {
-        return esErasmus && this.edad < 25;
+        return this.esErasmus && this.edad < 25;
     }
 
     @Override
