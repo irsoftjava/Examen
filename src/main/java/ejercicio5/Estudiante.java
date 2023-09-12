@@ -27,4 +27,25 @@ public class Estudiante extends Persona {
         super(nombre, direccion, edad);
         this.codigo = codigo;
     }
+
+    /**
+     * Métodos
+     */
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "codigo='" + codigo + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", edad=" + edad +
+                '}';
+    }
 }
