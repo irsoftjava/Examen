@@ -8,7 +8,7 @@ public class EstudianteInt extends Estudiante {
     /**
      * Atributos
      */
-    private Boolean esErasmus;
+    private boolean esErasmus;
     private String nacionalidad;
 
     /**
@@ -53,11 +53,13 @@ public class EstudianteInt extends Estudiante {
     }
 
     public boolean esEuropeo() {
-        return true;
+        return this.nacionalidad.equals(Nacionalidad.INGLES.toString()) ||
+                this.nacionalidad.equals(Nacionalidad.FRANCES.toString()) ||
+                this.nacionalidad.equals(Nacionalidad.PORTUGUÉS.toString());
     }
 
     public boolean descuentosParaJovenes() {
-        return true;
+        return esErasmus && this.edad < 25;
     }
 
     @Override
