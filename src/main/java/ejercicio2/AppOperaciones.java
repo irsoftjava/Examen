@@ -28,7 +28,7 @@ public class AppOperaciones {
     static int division(int a, int b) {
         int r = 0;
         try {
-            r = a / b;
+            r =  a / b;
         } catch (ArithmeticException e) {
             System.out.println("ERROR: Imposible dividir por 0.");
         }
