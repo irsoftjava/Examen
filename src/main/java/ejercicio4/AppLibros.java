@@ -1,8 +1,6 @@
 package ejercicio4;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -53,12 +51,14 @@ public class AppLibros {
         System.out.printf("De la categoría %s existen %d libros.%n", categoriaABuscar, cc);
 
         // Ordenar
-        /*libros.sort(new Comparator<Libro>() {
+        /*
+        libros.sort(new Comparator<Libro>() {
             @Override
             public int compare(Libro o1, Libro o2) {
                 return o1.getTitulo().compareTo(o2.getTitulo());
             }
-        });*/
+        });
+        */
         System.out.println();
         libros.sort((Libro l1, Libro l2) -> l1.getTitulo().compareTo(l2.getTitulo()));
 
