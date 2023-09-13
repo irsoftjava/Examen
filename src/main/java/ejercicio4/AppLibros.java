@@ -32,6 +32,7 @@ public class AppLibros {
         libros.add(new Libro("84-473-0120-6","Avances en Arquitectura","Helmut Richter","Informática", 2005,39.4));
 
         // Listar Libros
+        System.out.println();
         System.out.println("Lista de Libros.");
         for (Libro l : libros) {
             System.out.println(l);
