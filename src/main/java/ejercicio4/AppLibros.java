@@ -1,6 +1,8 @@
 package ejercicio4;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -58,6 +60,9 @@ public class AppLibros {
         //         return o1.getTitulo().compareTo(o2.getTitulo());
         //     }
         // });
+
+        // Otra manera de ordenar un ArrayList de objetos Libros
+        // Collections.sort(libros, Comparator.comparing(l -> l.getTitulo()));
 
         // Otra forma de ordenar la lista de Libros
         System.out.println();
