@@ -12,16 +12,6 @@ import java.util.List;
 
 public class AppLibros {
 
-//    static double mayorPrecio(List<Libro> ls) {
-//        double mp = ls.get(0).getPrecio();
-//        for (Libro l : ls) {
-//            if (l.getPrecio() > mp) {
-//                mp = l.getPrecio();
-//            }
-//        }
-//        return mp;
-//    }
-
     public static void main(String[] args) {
 
         // ArrayList de Libros
