@@ -12,19 +12,19 @@ import java.util.List;
 
 public class AppLibros {
 
-    static double mayorPrecio(List<Libro> ls) {
-        double mp = ls.get(0).getPrecio();
-        for (Libro l : ls) {
-            if (l.getPrecio() > mp) {
-                mp = l.getPrecio();
-            }
-        }
-        return mp;
-    }
+//    static double mayorPrecio(List<Libro> ls) {
+//        double mp = ls.get(0).getPrecio();
+//        for (Libro l : ls) {
+//            if (l.getPrecio() > mp) {
+//                mp = l.getPrecio();
+//            }
+//        }
+//        return mp;
+//    }
 
     public static void main(String[] args) {
 
-        //
+        // ArrayList de Libros
         List<Libro> libros = new ArrayList<>();
 
         // Cargado de Libros
@@ -40,12 +40,13 @@ public class AppLibros {
             System.out.println(l);
         }
 
-        // Mayor
-        double mayor = mayorPrecio(libros);
+        // Mayor precio
+        //double mayor = mayorPrecio(libros);
+        double mayor = Collections.max(libros, Comparator.comparing(l -> l.getPrecio())).getPrecio();
         System.out.println();
         System.out.println("Mayor Precio: " + mayor);
 
-        // Categoría
+        // Filtrado por Categoría
         String categoriaABuscar = "Informática";
         System.out.println();
         int cc = (int)libros.stream()
@@ -53,7 +54,7 @@ public class AppLibros {
                 .count();
         System.out.printf("De la categoría %s existen %d libros.%n", categoriaABuscar, cc);
 
-        // Ordenar
+        // ArrayList ordenado por Titulo de los Libros
         // libros.sort(new Comparator<Libro>() {
         //     @Override
         //     public int compare(Libro o1, Libro o2) {
