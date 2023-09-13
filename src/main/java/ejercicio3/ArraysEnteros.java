@@ -1,10 +1,6 @@
 package ejercicio3;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.OptionalInt;
 
 /**
  * Ejercicio #3
@@ -14,8 +10,8 @@ public class ArraysEnteros {
 
     static int max(int[] valores) {
         int m = valores[0];
-        for (int j = 0; j < valores.length; j++) {
-            if (valores[j] > m) m = valores[j];
+        for (int valore : valores) {
+            if (valore > m) m = valore;
         }
         return m;
     }
@@ -37,7 +33,10 @@ public class ArraysEnteros {
         int maximo = max(enteros);
         int p = pos(enteros, maximo);
 
+        System.out.println();
+        System.out.println(Arrays.toString(enteros));
         System.out.println("El máximo valor es: " + maximo);
-        System.out.printf("El valor %d esta en la posición %d", maximo, p);
+        System.out.printf("El valor %d esta en la posición %d\n", maximo, p);
+
     }
 }
