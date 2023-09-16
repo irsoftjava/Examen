@@ -32,7 +32,7 @@ public class AppLibros {
 
         // Mayor precio
         //double mayor = mayorPrecio(libros);
-        double mayor = Collections.max(libros, Comparator.comparing(l -> l.getPrecio())).getPrecio();
+        double mayor = Collections.max(libros, Comparator.comparing(Libro::getPrecio)).getPrecio();
         System.out.println();
         System.out.println("Mayor Precio: " + mayor);
 
